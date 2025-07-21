@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Especial 💜</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-screen" class="card">
+        <img src="cute-cat.png" alt="Gatinho fofo" class="cat-image">
+        <h1>Quiz de Personalidade</h1>
+        <p class="subtitle">Olá! Fiz um quiz divertido para conhecer você melhor! ✨</p>
+        <button class="btn" onclick="startQuiz()">
+            ✨ Começar Quiz
+        </button>
+    </div>
+
+    <div id="quiz-screen" class="card hidden">
+        <div class="progress">
+            <span class="progress-text">Pergunta <span id="current-q">1</span> de 4</span>
+            <div class="progress-dots">
+                <div class="dot active" id="dot-0"></div>
+                <div class="dot" id="dot-1"></div>
+                <div class="dot" id="dot-2"></div>
+                <div class="dot" id="dot-3"></div>
+            </div>
+        </div>
+        
+        <h2 class="question" id="question-text">Qual é a sua cor favorita?</h2>
+        
+        <div class="options" id="options-container">
+        </div>
+        
+        <button class="btn" id="next-btn" onclick="nextQuestion()" disabled>
+            Próxima
+        </button>
+    </div>
+
+    <div id="final-screen" class="card hidden">
+        <h2 class="final-question">💕 Pergunta Final 💕</h2>
+        <p class="final-subtitle">Depois de todas essas perguntas... você gostaria de namorar comigo? 🥺</p>
+        
+        <div class="final-buttons" id="final-container">
+            <button class="btn btn-yes" onclick="handleYes()">
+                💚 SIM! 💚
+            </button>
+            <button class="btn btn-no" id="no-btn" onmouseenter="moveNoButton()" onmouseover="moveNoButton()">
+                💔 Não
+            </button>
+        </div>
+    </div>
+
+    <div id="success-screen" class="card hidden">
+        <div class="success-screen">
+            <h1 class="success-title">🎉 YAAAAY! 🎉</h1>
+            <p class="success-subtitle">Você disse SIM! 💕</p>
+            
+            <div class="big-heart">💖</div>
+            
+            <p class="success-message">Agora somos oficialmente um casal!</p>
+            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 20px;">
+                (Inspirado em Horimiya - onde o amor verdadeiro sempre vence! 🌸)
+            </p>
+            
+            <div class="horimiya-quote">
+                <p>"Assim como Hori e Miyamura, nossa história de amor está apenas começando..." 💕</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="hearts-container" class="hearts hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
